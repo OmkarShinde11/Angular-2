@@ -23,3 +23,9 @@
     <p *ngIf="singleServer.type === 'server'" style="color:green" #content>{{singleServer.content}}</p>
     <p *ngIf="singleServer.type === 'blueprint'" style="color:blue" #content>{{singleServer.content}}</p> 
 </app-server-info>
+
+<app-odd-even></app-odd-even>
+
+<app-gamecontroller (game)="gameStart($event)" [increment]="count"  ></app-gamecontroller>
+<app-odd *ngFor="let num of oddNumber" [oddNumber]="num" ></app-odd>
+<app-even *ngFor="let num of evenNumber" [evenNumber]="num"></app-even>

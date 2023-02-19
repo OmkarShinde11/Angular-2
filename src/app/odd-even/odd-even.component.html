@@ -1,0 +1,13 @@
+<button (click)="onlyadd=!onlyadd">Only show odd numbers</button>
+<div *ngIf="onlyadd">
+    <li *ngFor="let even of evenNumber" [ngClass]="even%2!==0?'container':''" 
+    [ngStyle]="{backgroundColor:even%2!==0?'yellow':'transperent'}">{{even}}</li>
+</div>
+<div *ngIf="!onlyadd">
+    <li *ngFor="let odd of oddNumber" [ngClass]="odd%2!==0?'container':''"
+    [ngStyle]="{backgroundColor:odd%2!==0?'yellow':'transperent'}"
+    >{{odd}}</li>
+</div>
+
+<p appBasic>Style with Basic directive</p>
+<p appBetter>Style with Better Directive</p>

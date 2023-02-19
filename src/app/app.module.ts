@@ -15,6 +15,12 @@ import { Child1Component } from './parent/child1/child1.component';
 import { Child2Component } from './parent/child2/child2.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerInfoComponent } from './server-info/server-info.component';
+import { OddEvenComponent } from './odd-even/odd-even.component';
+import { BasicDirective } from './Directives/basic.directive';
+import { BetterDirective } from './Directives/better.directive';
+import { GamecontrollerComponent } from './gamecontroller/gamecontroller.component';
+import { OddComponent } from './odd/odd.component';
+import { EvenComponent } from './even/even.component';
 
 
 
@@ -32,6 +38,12 @@ import { ServerInfoComponent } from './server-info/server-info.component';
     Child2Component,
     CockpitComponent,
     ServerInfoComponent,
+    OddEvenComponent,
+    BasicDirective,
+    BetterDirective,
+    GamecontrollerComponent,
+    OddComponent,
+    EvenComponent,
    
   ],
   imports: [
