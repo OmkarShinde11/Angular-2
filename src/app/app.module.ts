@@ -21,6 +21,8 @@ import { BetterDirective } from './Directives/better.directive';
 import { GamecontrollerComponent } from './gamecontroller/gamecontroller.component';
 import { OddComponent } from './odd/odd.component';
 import { EvenComponent } from './even/even.component';
+import { Host1Directive } from './Directives/host1.directive';
+import { HostBindDirective } from './Directives/host-bind.directive';
 
 
 
@@ -44,6 +46,8 @@ import { EvenComponent } from './even/even.component';
     GamecontrollerComponent,
     OddComponent,
     EvenComponent,
+    Host1Directive,
+    HostBindDirective,
    
   ],
   imports: [
