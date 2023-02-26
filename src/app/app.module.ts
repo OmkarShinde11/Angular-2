@@ -23,6 +23,7 @@ import { OddComponent } from './odd/odd.component';
 import { EvenComponent } from './even/even.component';
 import { Host1Directive } from './Directives/host1.directive';
 import { HostBindDirective } from './Directives/host-bind.directive';
+import { StructureDirective } from './Directives/structure.directive';
 
 
 
@@ -48,6 +49,7 @@ import { HostBindDirective } from './Directives/host-bind.directive';
     EvenComponent,
     Host1Directive,
     HostBindDirective,
+    StructureDirective,
    
   ],
   imports: [

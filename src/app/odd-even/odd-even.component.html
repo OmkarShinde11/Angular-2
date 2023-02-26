@@ -1,5 +1,5 @@
 <button (click)="onlyadd=!onlyadd">Only show odd numbers</button>
-<div *ngIf="onlyadd">
+<!-- <div *ngIf="onlyadd">
     <li *ngFor="let even of evenNumber" [ngClass]="even%2!==0?'container':''" 
     [ngStyle]="{backgroundColor:even%2!==0?'yellow':'transperent'}">{{even}}</li>
 </div>
@@ -7,9 +7,17 @@
     <li *ngFor="let odd of oddNumber" [ngClass]="odd%2!==0?'container':''"
     [ngStyle]="{backgroundColor:odd%2!==0?'yellow':'transperent'}"
     >{{odd}}</li>
-</div>
+</div> -->
 
 <p appBasic>Style with Basic directive</p>
 <p appBetter>Style with Better Directive</p>
 <p appHost1>Style with Hostlistener directive</p>
 <p appHostBind [fadeIn]="'orange'" [fadeOut]="'white'">Style with hostBind directive</p>
+
+<ul>
+<div *appStructure="onlyadd">
+    <li *ngFor="let odd of oddNumber" [ngClass]="odd%2!==0?'container':''"
+    [ngStyle]="{backgroundColor:odd%2!==0?'yellow':'transperent'}"
+    >{{odd}}</li>
+</div>
+</ul>
