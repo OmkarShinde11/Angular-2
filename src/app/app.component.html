@@ -29,3 +29,6 @@
 <app-gamecontroller (game)="gameStart($event)" [increment]="count"  ></app-gamecontroller>
 <app-odd *ngFor="let num of oddNumber" [oddNumber]="num" ></app-odd>
 <app-even *ngFor="let num of evenNumber" [evenNumber]="num"></app-even>
+
+<app-active-user [users]="activeUser"></app-active-user>
+<app-inactive-user [users]="inactiveUser"></app-inactive-user>

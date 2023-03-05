@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from './Service/user.service';
 
 @Component({
   selector: 'app-root',
@@ -15,8 +16,14 @@ export class AppComponent implements OnInit {
   server=[{
     type:'blueprint',name:'Test Server',content:'Testing Server'
   }];
+  activeUser:string[];
+  inactiveUser:string[];
+
+  constructor(private userservice:UserService){}
   ngOnInit(){
-      console.log(this.server)
+      console.log(this.server);
+      this.activeUser=this.userservice.userActive;
+      this.inactiveUser=this.userservice.userInactive;
       
   }
   addServer(serverdata:{name:string,content:string}){
@@ -51,6 +58,8 @@ export class AppComponent implements OnInit {
     }
     
   }
+  
+
   
 }
   

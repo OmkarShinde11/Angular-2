@@ -24,9 +24,10 @@ import { EvenComponent } from './even/even.component';
 import { Host1Directive } from './Directives/host1.directive';
 import { HostBindDirective } from './Directives/host-bind.directive';
 import { StructureDirective } from './Directives/structure.directive';
-
-
-
+import { ActiveUserComponent } from './active-user/active-user.component';
+import { InactiveUserComponent } from './inactive-user/inactive-user.component';
+import { UserService } from './Service/user.service';
+import { CounterService } from './Service/counter.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +51,8 @@ import { StructureDirective } from './Directives/structure.directive';
     Host1Directive,
     HostBindDirective,
     StructureDirective,
+    ActiveUserComponent,
+    InactiveUserComponent,
    
   ],
   imports: [
@@ -58,7 +61,8 @@ import { StructureDirective } from './Directives/structure.directive';
     FormsModule,
   ],
   providers: [
-    {provide:LocationStrategy,useClass:PathLocationStrategy}
+    {provide:LocationStrategy,useClass:PathLocationStrategy},
+    UserService,CounterService
   ],
   bootstrap: [AppComponent]
 })
